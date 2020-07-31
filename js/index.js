@@ -18,6 +18,15 @@ function operPressed(ev) {
   display.value += oper;
 }
 
+document
+  .querySelector('.opers button.square-root')
+  .addEventListener('click', squareRootPressed);
+
+function squareRootPressed(ev) {
+  const squareRoot = ev.target.innerText;
+  display.value = Math.sqrt(display.value);
+}
+
 document.querySelector('.eq').addEventListener('click', eqPressed);
 
 function eqPressed() {
